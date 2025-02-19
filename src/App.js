@@ -7,9 +7,7 @@ import LoadingBar from "react-top-loading-bar";
 import { useState } from 'react';
 
 function App() {
-  const api1 = "d075fbcf9f084a58b98795ae555b8689"
-  // const api2 = "c6875d3356264a28a72704f6fc1693b0"
-  const api = api1
+  const api = process.env.REACT_APP_NEWS_API
 
   const [progress, setProgress] = useState(0)
 

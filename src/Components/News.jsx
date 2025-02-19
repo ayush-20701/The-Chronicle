@@ -22,7 +22,7 @@ const News = (props) => {
     };
 
     const updateNews = async () => {
-        console.log("Update news called");
+        // console.log("Update news called");
         const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${props.apiKey}&page=${page}&pageSize=${props.pageSize}`;
         setLoading(true);
         props.setProgress(10)
@@ -30,7 +30,7 @@ const News = (props) => {
         props.setProgress(40)
         let parsedData = await data.json();
         props.setProgress(70)
-        console.log(parsedData);
+        // console.log(parsedData);
         setArticles(parsedData.articles);
         setTotalResults(parsedData.totalResults);
         setLoading(false);
@@ -38,12 +38,12 @@ const News = (props) => {
     };
     
     const fetchMoreData = async () => {
-        console.log("fetchMoreData called");
+        // console.log("fetchMoreData called");
         const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${props.apiKey}&page=${page + 1}&pageSize=${props.pageSize}`;
         setPage(page + 1);
         let data = await fetch(url);
         let parsedData = await data.json();
-        console.log(parsedData);
+        // console.log(parsedData);
         
         if(parsedData.articles.length === 0){
             setSpinner(false); //hide spinner when all the articles are loaded
