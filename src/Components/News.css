@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&display=swap');
+
+.news{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    width: 100%;
+    scrollbar-gutter: stable both-edges;
+}
+.heading{
+    padding: 1rem 0 0 0;
+    font-family: "Jost", serif;
+    font-weight: 500;
+    font-size: 1.3rem;
+	color: #250a6e;
+}
+.news-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping for responsiveness */
+    justify-content: space-between; /* Spaces out columns evenly */
+    gap: 20px; /* Adds spacing between items */
+    padding: 1% 2%;
+}
+.news-item {
+    flex: 1 1 calc(33.33% - 20px); /* Each item takes 1/3rd of the space */
+    max-width: calc(33.33% - 20px); /* Prevents stretching */
+    box-shadow: 9px 9px 8px 0px #8f9dab;
+    border-radius: 10px;
+    overflow: hidden;
+}
+/* Hide the default scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    background: transparent;
+    height: 8px;
+  }
+  
+  /* Track (the background of the scrollbar) */
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  /* Handle (the draggable part) */
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+  }
+  
+  /* Hover effect */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.7);
+  }

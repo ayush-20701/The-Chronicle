@@ -1,0 +1,5 @@
+- (done) Remove spinner when all the articles have been loaded
+- Sticky navbar
+- Back to top floating button
+- Search feature
+- Loading bar
