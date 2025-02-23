@@ -1,5 +1,5 @@
 import React from 'react'
-import './NewsItem.css'
+import './Styles/NewsItem.css'
 export default function NewsItem(props) {
   let { title, description, imageUrl, newsUrl, date, source } = props;
   const newDate = new Date(date).toGMTString();

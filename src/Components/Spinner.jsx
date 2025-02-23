@@ -1,5 +1,5 @@
 import React from "react";
-import loading from "./Spinner.gif";
+import loading from "./Assets/Spinner.gif";
 const Spinner = () => {
   return (
     <div className="spinner" style={{display: "flex", justifyContent: "center", alignItems: "center", height: "20vh"}}>
