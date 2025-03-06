@@ -41,7 +41,14 @@ const News = (props) => {
         // console.log("fetchMoreData called");
         const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${props.apiKey}&page=${page + 1}&pageSize=${props.pageSize}`;
         setPage(page + 1);
-        let data = await fetch(url);
+        let data = await fetch(url, {
+            method: "GET",
+            headers: {
+              "Connection": "Upgrade",
+              "Upgrade": "websocket"
+            }
+        })
+        
         let parsedData = await data.json();
         // console.log(parsedData);
         
